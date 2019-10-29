@@ -481,7 +481,8 @@ function createCocktailCard(name, imageURL, id) {
    card.appendChild(image);
 
    card.addEventListener('click', function(){
-      createCocktailCard(name, title, id)
+      var cocktailSpotlight = createCocktailSpotlight(name, imageURL, id);
+      document.body.appendChild(cocktailSpotlight)
    })
 
    return card;
@@ -506,7 +507,11 @@ function createCocktailSpotlight(name, imageURL, id) {
 
    var p = document.createElement('p');
    p.textContent = "Instructions";
-   spotlight.appendChild(p)
+   spotlight.appendChild(p);
+
+   spotlightcard.addEventListener('click', function () {
+      spotlightcard.remove(); 
+   })
 
    return spotlightcard;
 }

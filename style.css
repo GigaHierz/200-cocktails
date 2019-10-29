@@ -1,3 +1,56 @@
 body {
    background-color: rgb(143, 143, 190);
 }
+img {
+   width: 50%;
+}
+
+#spotlight {
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#spotlight h1 {
+   font-size: 2.5rem;
+   text-decoration: underline;
+}
+
+#spotlight-card {
+   background-color: blanchedalmond;
+   width: 50vw;
+   text-align: center;
+   border-style: solid;
+   border-width: 2px;
+   display: block;
+   margin: 2em auto 2em auto;
+   padding: 3.5em 0.1em;
+}
+
+#cocktail-list {
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 1em;
+   grid-auto-rows: 15em;
+}
+
+.card {
+   display: grid;
+   background-color: var(--background-color);
+   border-style: double;
+   border-width: 4px;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+   cursor: pointer;
+   padding-top: 1.5em;
+}
+
+.card:hover {
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transform: scale(1.01);
+ }
